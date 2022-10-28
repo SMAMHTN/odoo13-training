@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="aldim_ext_sales" model="ir.ui.view">
+        <field name="name">aldim.ext.sales</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+            <field name="end_user" string="End User"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aldim_ext_sales_view_quotation_tree" model="ir.ui.view">
+        <field name="name">aldim.ext.sales.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="end_user" string="End User"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
