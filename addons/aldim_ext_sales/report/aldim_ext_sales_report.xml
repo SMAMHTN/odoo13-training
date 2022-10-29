@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="aldim_ext_sales_report"
+    inherit_id="sale.report_saleorder_document">
+        <xpath expr="//span[@t-field='doc.name']" position="after">
+        <span t-field="aldim_ext_sales.end_user"/>
+        </xpath>
+    </template>
+</odoo>
