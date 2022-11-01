@@ -10,7 +10,7 @@ class FirstModel(models.Model):
         index= True,
         help= 'Nama Mahasiswa Sesuai PDDikti'
     )
-    nim = fields.Integer(
+    nim = fields.Char(
         string='NIM',
         required=True,
         index=True,
